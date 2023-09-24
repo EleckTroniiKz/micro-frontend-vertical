@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="p-5 bg-blue-600 text-white text-center">
+    <div className="p-5 bg-yellow-400 text-center text-black">
       <a
         href="https://github.com/EleckTroniiKz/micro-frontend-vertical"
         target="_blank"
@@ -10,7 +10,7 @@ export default function Footer() {
         Github repository
       </a>
       <br />
-      Application: Home
+      Application: User Detail Edit
     </div>
   );
 }

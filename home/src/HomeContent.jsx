@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { ReactDOM } from "react-dom";
 
 import { getUsers } from "./users";
-
+import Header from "home/Header";
+import Footer from "home/Footer";
 import UserList from "home/UserList";
 
 export default function HomeContent() {
@@ -14,7 +14,9 @@ export default function HomeContent() {
 
   return (
     <div>
+      <Header />
       <UserList users={users} />
+      <Footer />
     </div>
   );
 }

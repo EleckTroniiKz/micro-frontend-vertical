@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <div className="p-5 bg-blue-600 text-white text-3xl font-bold mb-8">
+    <div className="p-5 bg-yellow-400 text-black text-3xl font-bold mb-8 ">
       <div className="flex">
         <div className="flex-grow flex">
           <Link to="/">MFE-HorizontalSplit</Link>

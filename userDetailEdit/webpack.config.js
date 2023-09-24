@@ -54,6 +54,7 @@ module.exports = {
       },
       exposes: {
         "./UserDetailEditor": "./src/UserDetailEditor.jsx",
+        "./HomeContainer": "./src/HomeContainer.jsx",
       },
       shared: {
         ...deps,

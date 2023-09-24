@@ -21,7 +21,7 @@ export default function UserDetailEditor() {
   if (!user) return null;
 
   return (
-    <div className="rounded-lg bg-yellow-400 p-5">
+    <div className="rounded-lg bg-yellow-400 p-5 mb-8">
       <div className="flex m-5">
         <p className="w-1/4">Name: </p>
         <InputField

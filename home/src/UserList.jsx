@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function UserList({ users, onEdit }) {
   return (
-    <div className="p-3 bg-red-600 text-white text-left w-full rounded-lg">
+    <div className="p-3 bg-blue-600 text-white text-left w-full rounded-lg mb-8">
       <table className="w-full">
         <tbody className="w-full divide-y divide-black divide-x">
           {users?.map((user) => (
