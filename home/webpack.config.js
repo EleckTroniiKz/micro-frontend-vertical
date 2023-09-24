@@ -53,11 +53,8 @@ module.exports = {
       },
       exposes: {
         "./users": "./src/users.js",
-        "./HomeContent": "./src/HomeContent.jsx",
         "./PageRootLayout": "./src/PageRootLayout.jsx",
-        "./Header": "./src/Header.jsx",
-        "./Footer": "./src/Footer.jsx",
-        "./UserList": "./src/UserList.jsx",
+        "./HomeContent": "./src/HomeContent.jsx",
       },
       shared: {
         ...deps,

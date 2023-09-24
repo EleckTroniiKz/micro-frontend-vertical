@@ -4,7 +4,7 @@ export default function InputField({ onChange, value, type, placeholder }) {
   return (
     <div className="w-full">
       <input
-        className="w-full w-3/4 rounded-lg bg-white-600 p-2 text-white"
+        className="w-full w-3/4 rounded-lg bg-white-600 p-2 text-black"
         value={value}
         type={type}
         onChange={(e) => onChange(e)}

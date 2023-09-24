@@ -53,7 +53,6 @@ module.exports = {
           "userdetailseditor@http://localhost:3001/remoteEntry.js",
       },
       exposes: {
-        "./UserDetailEditor": "./src/UserDetailEditor.jsx",
         "./HomeContainer": "./src/HomeContainer.jsx",
       },
       shared: {

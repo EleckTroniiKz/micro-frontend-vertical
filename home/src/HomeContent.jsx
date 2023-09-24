@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 import { getUsers } from "./users";
-import Header from "home/Header";
-import Footer from "home/Footer";
-import UserList from "home/UserList";
+import Header from "./Header";
+import Footer from "./Footer";
+import UserList from "./UserList";
 
 export default function HomeContent() {
   const [users, setUsers] = useState([]);
