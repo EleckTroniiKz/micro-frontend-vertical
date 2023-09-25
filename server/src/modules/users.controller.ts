@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Param } from '@nestjs/common';
+import { Controller, Get, Post, Delete, Param } from '@nestjs/common';
 
 import users, { User } from '../users';
 
@@ -56,6 +56,18 @@ export class UsersController {
     }
     this.setUsers(oldUsers);
 
+    return;
+  }
+
+  @Delete('/delete/:id')
+  async delete(@Param('id') id: string): Promise<User> {
+    const updatedUsers = [];
+    for (let i = 0; i < this.users.length; i++) {
+      if (this.users[i].id !== parseInt(id)) {
+        updatedUsers.push(this.users[i]);
+      }
+    }
+    this.setUsers(updatedUsers);
     return;
   }
 }
