@@ -7,6 +7,7 @@ export class UsersController {
   constructor() {}
 
   private users = users;
+  private deletedIds = [];
 
   private setUsers(users: User[]): void {
     this.users = users;
@@ -14,20 +15,14 @@ export class UsersController {
 
   @Get()
   async index(): Promise<User[]> {
+    console.log(this.users);
+    console.log(this.deletedIds);
     return this.users;
   }
 
   @Get(':id')
   async show(@Param('id') id: string): Promise<User> {
     return this.users.find((user) => user.id === parseInt(id));
-  }
-
-  @Post('/newSave/:user')
-  async saveNew(@Param('user') user: string): Promise<void> {
-    const newUser = JSON.parse(user);
-    newUser.id = this.users.length + 1;
-    this.setUsers([...this.users, newUser]);
-    return;
   }
 
   @Post('/save/:user')
@@ -42,7 +37,11 @@ export class UsersController {
     )
       return;
     if (!Object.keys(newUser).includes('id')) {
-      newUser.id = this.users.length + 1;
+      if (this.deletedIds.length > 0) {
+        newUser.id = this.deletedIds.shift();
+      } else {
+        newUser.id = this.users.length + 1;
+      }
       this.setUsers([...this.users, newUser]);
       return;
     }
@@ -67,6 +66,7 @@ export class UsersController {
         updatedUsers.push(this.users[i]);
       }
     }
+    this.deletedIds.push(parseInt(id));
     this.setUsers(updatedUsers);
     return;
   }

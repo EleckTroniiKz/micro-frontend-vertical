@@ -18,18 +18,18 @@ export default function UserList({ users, onEdit }) {
           {users?.map((user) => (
             <tr key={user.id} className="w-full table flex ">
               <td className="w-1/4 ">{user.name}</td>
-              <td className="w-1/4 ">{user.gender}</td>
+              <td className="w-1/5 ">{user.gender}</td>
               <td className="w-1/4 ">{user.country}</td>
               <td className="w-1/4 ">{user.height}</td>
-              <td className="w-1/5 ">
-                {user.id !== 0 && (
+              <td className="w-1/4 ">
+                {
                   <Link to={`/users/${user.id}`}>
                     <div>Edit</div>
                   </Link>
-                )}
+                }
               </td>
               <td>
-                {user.id !== 0 && (
+                {
                   <Link to={`/`}>
                     <Button
                       onClick={() => {
@@ -40,7 +40,7 @@ export default function UserList({ users, onEdit }) {
                       Delete
                     </Button>
                   </Link>
-                )}
+                }
               </td>
             </tr>
           ))}
