@@ -52,7 +52,7 @@ export default function UserDetailEditor() {
         />
       </div>
       <Button onClick={() => saveUser(user)}>
-        <Link id="addUser" to="/">
+        <Link id="saveUser" to="/">
           SaveUser
         </Link>
       </Button>

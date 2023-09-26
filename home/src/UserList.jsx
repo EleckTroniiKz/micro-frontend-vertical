@@ -27,16 +27,16 @@ export default function UserList({ users }) {
               id={`User-${user.id}`}
               className="w-full table flex "
             >
-              <td id="name-input" className="w-1/4 ">
+              <td id="name" className="w-1/4 ">
                 {user.name}
               </td>
-              <td id="gender-input" className="w-1/5 ">
+              <td id="gender" className="w-1/5 ">
                 {user.gender}
               </td>
-              <td id="country-input" className="w-1/4 ">
+              <td id="country" className="w-1/4 ">
                 {user.country}
               </td>
-              <td id="height-input" className="w-1/4 ">
+              <td id="height" className="w-1/4 ">
                 {user.height}
               </td>
               <td id="edit" className="w-1/4 ">
