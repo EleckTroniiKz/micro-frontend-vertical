@@ -19,26 +19,34 @@ export default function UserList({ users }) {
       id="user-list"
       className="p-3 bg-blue-600 text-white text-left w-full rounded-lg mb-8"
     >
-      <table className="w-full">
-        <tbody className="w-full divide-y divide-black divide-x">
+      <table id="table" className="w-full">
+        <tbody id="t-body" className="w-full divide-y divide-black divide-x">
           {users?.map((user) => (
             <tr
               key={user.id}
               id={`User-${user.id}`}
               className="w-full table flex "
             >
-              <td className="w-1/4 ">{user.name}</td>
-              <td className="w-1/5 ">{user.gender}</td>
-              <td className="w-1/4 ">{user.country}</td>
-              <td className="w-1/4 ">{user.height}</td>
-              <td className="w-1/4 ">
+              <td id="name-input" className="w-1/4 ">
+                {user.name}
+              </td>
+              <td id="gender-input" className="w-1/5 ">
+                {user.gender}
+              </td>
+              <td id="country-input" className="w-1/4 ">
+                {user.country}
+              </td>
+              <td id="height-input" className="w-1/4 ">
+                {user.height}
+              </td>
+              <td id="edit" className="w-1/4 ">
                 {
                   <Link to={`/users/${user.id}`}>
                     <div>Edit</div>
                   </Link>
                 }
               </td>
-              <td>
+              <td id="delete">
                 {
                   <Link to={`/`}>
                     <Button
