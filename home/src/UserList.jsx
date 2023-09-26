@@ -47,18 +47,16 @@ export default function UserList({ users }) {
                 }
               </td>
               <td id="delete">
-                {
-                  <Link to={`/`}>
-                    <Button
-                      onClick={() => {
-                        deleteUser(user.id);
-                        setDeleted(true);
-                      }}
-                    >
-                      Delete
-                    </Button>
-                  </Link>
-                }
+                <Link to={`/`}>
+                  <Button
+                    onClick={() => {
+                      deleteUser(user.id);
+                      setDeleted(true);
+                    }}
+                  >
+                    Delete
+                  </Button>
+                </Link>
               </td>
             </tr>
           ))}
