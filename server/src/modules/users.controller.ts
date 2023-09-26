@@ -15,8 +15,6 @@ export class UsersController {
 
   @Get()
   async index(): Promise<User[]> {
-    console.log(this.users);
-    console.log(this.deletedIds);
     return this.users;
   }
 

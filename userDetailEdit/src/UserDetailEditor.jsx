@@ -19,7 +19,6 @@ export default function UserDetailEditor() {
   }, [id]);
 
   if (!user) return null;
-  console.log(user);
 
   return (
     <div className="rounded-lg bg-yellow-400 p-5 mb-8">
