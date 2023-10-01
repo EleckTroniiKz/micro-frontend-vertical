@@ -1,7 +1,6 @@
-import { renderHook, act } from "@testing-library/react-hooks";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import UserList from "./UserList.jsx";
-import React, { Children } from "react";
+import React from "react";
 import { BrowserRouter } from "react-router-dom/cjs/react-router-dom.min.js";
 
 const userMock = [

@@ -1,8 +1,6 @@
-import { renderHook, act } from "@testing-library/react-hooks";
 import { render, fireEvent } from "@testing-library/react";
 import Button from "./Button.jsx";
-import React, { Children } from "react";
-import { BrowserRouter } from "react-router-dom/cjs/react-router-dom.min.js";
+import React from "react";
 
 setupMock();
 
